@@ -150,6 +150,9 @@
     }
   }
   .cut-2-top-left-bottom-2 {
+    a {
+      color: #736357;
+    }
     @include tablet {
       width: 100%;
       margin-top: 3%;
@@ -211,7 +214,7 @@
     @include tablet {
       justify-content: space-between;
       .cut-2-top-right-item-icon {
-        width: unset;
+        width: 3vw;
         height: 6vw;
         margin-top: 2vw;
         img {
@@ -635,6 +638,7 @@
       letter-spacing: 1px;
       text-decoration: none;
       color: #534741;
+      background-color: white;
       border: 1px solid #c7b299;
       border-radius: 10px;
       padding: 0.5vw 1.5vw;
