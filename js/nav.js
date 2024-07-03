@@ -67,9 +67,7 @@ function addNav(nav) {
   $(nav).empty().append(src);
 }
 
-$(window).on("load", function () {
-  const nav = $("#nav");
-
+$(window).on("load resize", function () {
   addNav("#nav");
 
   if (window.innerWidth <= 1024) {
