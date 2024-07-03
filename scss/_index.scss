@@ -1,0 +1,344 @@
+#home {
+  .cut-1-container {
+    width: 100%;
+    height: 95vh;
+    padding-top: 3%;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    @include tablet {
+      height: 168vw;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 2vw;
+    &::after {
+      display: none;
+    }
+    @include tablet {
+      width: 6vw;
+    }
+  }
+  .swiper-button-prev {
+    top: 130%;
+    left: 0;
+    @include tablet {
+      top: 150%;
+    }
+  }
+  .swiper-button-next {
+    top: 130%;
+    right: 80%;
+    @include tablet {
+      top: 150%;
+      right: 75%;
+    }
+  }
+  .cut-1-para {
+    position: absolute;
+    top: 45%;
+    left: 11%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    z-index: 1;
+    h1,
+    h2,
+    p {
+      font-family: $sans;
+      font-weight: 400;
+      color: white;
+    }
+    h1 {
+      font-size: 3vw;
+      letter-spacing: 3px;
+    }
+    h2 {
+      font-size: 2vw;
+      letter-spacing: 3px;
+      margin-top: 2%;
+    }
+    @include tablet {
+      top: 57%;
+      left: 14%;
+      h1 {
+        font-size: 7.5vw;
+      }
+      h2 {
+        font-size: 5vw;
+      }
+    }
+  }
+  .cut-1-para-p {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    padding-right: 2%;
+    margin-top: 10%;
+    span {
+      flex: 1 1;
+      background-color: white;
+      height: 1px;
+      margin-right: 3%;
+    }
+    p {
+      font-size: 1.3vw;
+      letter-spacing: 3px;
+    }
+    @include tablet {
+      margin-top: 5%;
+      padding-right: 0%;
+      p {
+        font-size: 3.25vw;
+      }
+    }
+  }
+  .swiper-slide-effect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .swiper-wrapper {
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+  }
+  .swiper-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scale(0.6, 0.6);
+    transition-duration: 1s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+    opacity: 0.9;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.2, 1.2) translateX(50%);
+      transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+      transition-property: transform;
+    }
+  }
+  //第2cut
+  .cut-2-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f2f2f2;
+    padding: 5% 0%;
+    @include tablet {
+      justify-content: center;
+      flex-direction: column;
+      padding: 10% 0%;
+    }
+  }
+  .cut-2-left {
+    width: 30%;
+    @include tablet {
+      width: 85%;
+    }
+  }
+  .cut-2-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 32%;
+
+    h2,
+    p {
+      font-family: $sans;
+      color: #534741;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: $mainTitle;
+      font-weight: 500;
+      margin-bottom: 6%;
+    }
+    p {
+      font-size: $contentSize;
+      font-weight: 400;
+      margin-bottom: 6%;
+      line-height: 1.8;
+    }
+    @include tablet {
+      width: 85%;
+      align-items: center;
+      h2 {
+        font-size: $mainTitlePH;
+        margin: 6% auto;
+      }
+      p {
+        font-size: $contentSizePH;
+        margin-bottom: 8%;
+      }
+    }
+  }
+  .cut-2-right-link {
+    border: 1px solid #c7b299;
+    border-radius: 10px;
+    padding: 0.75vw 2vw;
+    color: #534741;
+    text-decoration: none;
+    font-family: $ubu;
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    @include tablet {
+      margin: 0 auto;
+      font-size: $navSizePH;
+      font-weight: 500;
+      padding: 2.25vw 5vw;
+    }
+  }
+
+  //第3cut
+  .cut-3-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      color: #534741;
+      font-size: $mainTitle;
+      font-family: $sans;
+      font-weight: 500;
+      margin-top: 4%;
+      margin-bottom: 4%;
+    }
+    @include tablet {
+      h2 {
+        font-size: $mainTitlePH;
+        margin: 6% auto;
+      }
+    }
+  }
+  .cut-3-photo-wall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    @include tablet {
+      width: 85%;
+      margin-bottom: 5%;
+    }
+  }
+
+  .cut-3-photo-wall-left,
+  .cut-3-photo-wall-middle,
+  .cut-3-photo-wall-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+  }
+  .cut-3-photo-wall-middle,
+  .cut-3-photo-wall-right {
+    @include tablet {
+      display: none;
+    }
+  }
+  .cut-3-photo-wall-image {
+    position: relative;
+    width: 26vw;
+    overflow: hidden;
+    .cut-3-photo-wall-image-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0);
+      transition: all 0.5s;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-bottom: 20%;
+      padding-left: 5%;
+      h3 {
+        color: white;
+        font-weight: 400;
+        font-family: $sans;
+        font-size: 1.25vw;
+        letter-spacing: 2px;
+      }
+    }
+    &:hover {
+      .cut-3-photo-wall-image-text {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.5s;
+      }
+    }
+    @include tablet {
+      width: 100%;
+      .cut-3-photo-wall-image-text {
+        position: unset;
+        padding: 0;
+        opacity: 1;
+        background-color: unset;
+        justify-content: flex-start;
+        h3 {
+          position: unset;
+          color: #736357;
+          font-size: $mainTitlePH;
+          margin: 6% 0;
+          font-weight: 500;
+        }
+      }
+      &:hover {
+        .cut-3-photo-wall-image-text {
+          background-color: unset;
+        }
+      }
+    }
+  }
+  .cut-3-container-link {
+    border: 1px solid #c7b299;
+    border-radius: 10px;
+    padding: 0.75vw 8vw;
+    color: #534741;
+    text-decoration: none;
+    font-family: $ubu;
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    margin-top: 5%;
+    @include tablet {
+      margin: 0 auto;
+      font-size: 3.25vw;
+      font-weight: 500;
+      padding: 2.25vw 15vw;
+    }
+  }
+
+  //第4cut
+  .cut-4-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 0 16vw;
+    margin-bottom: 7%;
+    @include tablet {
+      flex-direction: column;
+      gap: 20vw 0;
+      margin-top: 10%;
+      margin-bottom: 25%;
+    }
+  }
+  .cut-4-company {
+    width: 12.5vw;
+    a {
+      width: 100%;
+      height: 100%;
+    }
+    @include tablet {
+      width: 40%;
+    }
+  }
+}

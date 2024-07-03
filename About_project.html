@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <title>歷屆業績</title>
+  </head>
+  <body>
+    <div class="loading-page">
+      <div class="loading-logo"><img src="./img/LOGO.png" alt="logo" /></div>
+      <div class="box-para">
+        <div class="loading-progress">0</div>
+        <span>%</span>
+      </div>
+    </div>
+    <nav id="nav"></nav>
+    <main id="about_project">
+      <section class="cut-1">
+        <div class="cut-1-container">
+          <picture>
+            <source
+              media="(max-width:1024px)"
+              srcset="./img/about-project/project-big-pic-ph.webp"
+            />
+            <img
+              src="./img/about-project/project-big-pic-pc.webp"
+              alt="project-big-pic-pc"
+            />
+          </picture>
+          <div class="cut-1-para">
+            <h1>歷屆業績</h1>
+            <div class="cut-1-para-line"></div>
+            <h3>VIEW PROJECT</h3>
+          </div>
+        </div>
+      </section>
+      <section class="cut-2">
+        <div class="cut-2-container">
+          <div class="cut-2-search">
+            <div class="cut-2-search-item">
+              <label class="cut-2-search-item-label" for="city">地區:</label>
+              <select name="city" id="city">
+                <option value="">------請選擇------</option>
+                <option value="台北市">台北市</option>
+                <option value="新北市">新北市</option>
+              </select>
+            </div>
+            <div class="cut-2-search-item">
+              <label class="cut-2-search-item-label" for="year">年份:</label>
+              <select name="year" id="year">
+                <option value="">------請選擇------</option>
+                <option value="2005">94年</option>
+                <option value="2006">95年</option>
+                <option value="2007">96年</option>
+                <option value="2008">97年</option>
+                <option value="2009">98年</option>
+                <option value="2014">103年</option>
+                <option value="2015">104年</option>
+                <option value="2016">105年</option>
+                <option value="2017">106年</option>
+                <option value="2019">108年</option>
+                <option value="2021">110年</option>
+                <option value="2022">111年</option>
+                <option value="2024">113年</option>
+              </select>
+            </div>
+            <div class="cut-2-search-item">
+              <label class="cut-2-search-item-label" for="build">類別:</label>
+              <select name="build" id="build">
+                <option value="">------請選擇------</option>
+                <option value="自地自建">自地自建</option>
+                <option value="購地及合建">購地及合建</option>
+                <option value="合建">合建</option>
+                <option value="工程承攬">工程承攬</option>
+              </select>
+            </div>
+          </div>
+          <div class="cut-2-result"></div>
+          <div class="cut-2-pagination"></div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <h3>大賞建設股份有限公司</h3>
+      <div class="footer-bottom">
+        <p>大賞建設股份有限公司版權所有 ©2024BIG-SUN.AIl Rights Reserved</p>
+        <p class="footer-bottom-line-1 pc">|</p>
+        <p class="footer-bottom-line-1 ph">-</p>
+        <p>新北市永和區中和路345號8樓</p>
+        <p class="footer-bottom-line-2">|</p>
+        <div class="footer-bottom-second">
+          <p>TEL:02-2924-7056</p>
+          <p class="footer-bottom-line-3">|</p>
+          <p>FAX:02-2924-6528</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/loading.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("#accordion").accordion();
+        let srcProject = []; //後端接收到的資料 不會更動
+        let data = []; //後端接收到的資料 主要是從這邊來決定網頁要渲染什麼資料
+        let prevPage; //js slice用 第一項數字
+        let currentPage; //js slice用 第二項數字
+        let itemLength; //資料長度
+        let nowIndex; //現在位置
+        $.ajax({
+          url: "./js/project.json",
+          type: "GET",
+          dataType: "json",
+          success: function (response) {
+            itemLength = response.length;
+            paginationRender(itemLength);
+
+            //response資料處理
+            //初始化
+            srcProject = response;
+            data = response;
+            currentPage = 6;
+            prevPage = 0;
+            nowIndex = 1;
+
+            addPageClass(nowIndex);
+            projectRender(data, 0, 6);
+          },
+        });
+
+        //渲染頁碼
+        function paginationRender(length) {
+          const pageItem = 6;
+          const pageNumber = Math.ceil(length / pageItem);
+
+          //分頁項目計算
+          src = "";
+          if (length > 0) {
+            src += `
+               <div class="cut-2-pagination-left-arrow cut-2-arrow">
+                <img src="./img/about-project/left-arrow.svg" alt="left-arrow" />
+              </div>`;
+            for (let i = 0; i < pageNumber; i++) {
+              src += `<div class="cut-2-pagination-number" data-number="${
+                i + 1
+              }">${i + 1}</div>`;
+            }
+            src += `
+              <div class="cut-2-pagination-right-arrow cut-2-arrow">
+                <img
+                  src="./img/about-project/right-arrow.svg"
+                  alt="right-arrow"
+                />
+              </div>`;
+          }
+          $(".cut-2-pagination").empty().append(src);
+        }
+
+        //把資料渲染到畫面
+        function projectRender(project, prev, current) {
+          let srcData = ``;
+          if (project.length <= 0) {
+            srcData += `<div class="cut-2-result-empty"><h1>查無資料</h1></div>`;
+          } else {
+            project.slice(prev, current).forEach((el) => {
+              srcData += `
+               <div class="cut-2-result-item">
+                <div class="cut-2-result-item-img">
+                  <img
+                    src="${el.img}"
+                    alt="project-big-sun"
+                  />
+                </div>
+                <div class="cut-2-result-para">
+                  <p class="p-1">${el.city}</p>
+                  <div class="line"></div>
+                  <p class="p-2">${el.name}</p>
+                </div>
+                <div class="cut-2-result-href"><a href="${el.link}">MORE</a></div>
+              </div>`;
+            });
+          }
+          $(".cut-2-result").empty().append(srcData);
+        }
+
+        function addPageClass(number) {
+          $(".cut-2-pagination-number").removeClass(
+            "cut-2-pagination-number-active"
+          );
+          $(`.cut-2-pagination-number[data-number='${number}']`).addClass(
+            "cut-2-pagination-number-active"
+          );
+        }
+
+        //頁碼換頁
+        $(".cut-2-pagination").on(
+          "click",
+          ".cut-2-pagination-number",
+          function (e) {
+            currentPage = $(e.target).data("number") * 6;
+            $(".cut-2-pagination-number").removeClass(
+              "cut-2-pagination-number-active"
+            );
+            prevPage = currentPage - 6;
+            nowIndex = $(e.target).data("number");
+            $(e.target).addClass("cut-2-pagination-number-active");
+            projectRender(data, prevPage, currentPage);
+          }
+        );
+
+        //上一頁
+        $(".cut-2-pagination").on(
+          "click",
+          ".cut-2-pagination-left-arrow",
+          function (e) {
+            if (currentPage <= 6) return;
+            currentPage -= 6;
+            prevPage -= 6;
+            nowIndex--;
+
+            addPageClass(nowIndex);
+            projectRender(data, prevPage, currentPage);
+          }
+        );
+        //下一頁
+        $(".cut-2-pagination").on(
+          "click",
+          ".cut-2-pagination-right-arrow",
+          function (e) {
+            if (currentPage >= itemLength) return;
+            currentPage += 6;
+            prevPage += 6;
+            nowIndex++;
+
+            addPageClass(nowIndex);
+            projectRender(data, prevPage, currentPage);
+          }
+        );
+
+        //select初始化
+        let choiced = [];
+        $("select").each(function () {
+          let id = $(this).attr("id");
+          choiced.push({ id: id, value: this.value });
+        });
+
+        $("select").on("change", function (e) {
+          let id = $(this).attr("id");
+          data = srcProject;
+          for (let i = 0; i < choiced.length; i++) {
+            if (choiced[i].id === id) {
+              choiced[i].value = this.value;
+            }
+            if (choiced[i].value === "") {
+              //滿足條件 直接跳到下一個迴圈
+              continue;
+            }
+            if (choiced[i].id === "city") {
+              data = data.filter((item) => item.city === choiced[i].value);
+            } else if (choiced[i].id === "year") {
+              data = data.filter((item) => item.year === choiced[i].value);
+            } else if (choiced[i].id === "build") {
+              data = data.filter((item) => item.build === choiced[i].value);
+            }
+          }
+          prevPage = 0;
+          currentPage = 6;
+
+          projectRender(data, prevPage, currentPage);
+          paginationRender(data.length);
+
+          addPageClass(nowIndex);
+        });
+      });
+    </script>
+  </body>
+</html>

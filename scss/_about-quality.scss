@@ -1,0 +1,224 @@
+#about_quality {
+  .cut-1-container {
+    position: relative;
+    padding-top: 0%;
+    @include tablet {
+      padding-top: 10%;
+    }
+  }
+  .cut-1-para {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 47%;
+    left: 12%;
+    width: 16vw;
+    h1 {
+      font-family: $sans;
+      font-weight: 400;
+      font-size: 2.75vw;
+      color: white;
+      letter-spacing: 2px;
+    }
+    h3 {
+      font-family: $ubu;
+      font-weight: 400;
+      font-size: 1.5vw;
+      color: white;
+      letter-spacing: 2px;
+    }
+    .cut-1-para-line {
+      width: 100%;
+      height: 1px;
+      margin: 0.75vw 0;
+      background-color: white;
+    }
+    @include tablet {
+      width: 37%;
+      left: 10%;
+      h1 {
+        font-size: $mainTitlePH;
+        letter-spacing: 2px;
+      }
+      h3 {
+        font-size: $navSizePH;
+        letter-spacing: 1px;
+      }
+      .cut-1-para-line {
+        margin: 4% 0;
+      }
+    }
+  }
+  //第2cut
+  .cut-2-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 8%;
+    margin-bottom: 12%;
+    @include tablet {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 10%;
+      margin-bottom: 25%;
+    }
+  }
+  .cut-2-about-menu-ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    width: 13vw;
+    --linkleft: -105%;
+    li {
+      font-size: $subTitleSize;
+      font-family: $sans;
+      font-weight: 400;
+      color: #736357;
+      width: 100%;
+      letter-spacing: 2px;
+      margin-bottom: 7%;
+
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: var(--linkleft);
+        width: 100%;
+        height: 100%;
+        background-color: #b28c67;
+        transition: all 0.5s;
+        z-index: -1;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: #736357;
+      width: 100%;
+      padding-left: 3vw;
+      padding-block: 0.5vw;
+      transition: all 0.5s;
+    }
+    li:hover {
+      &::after {
+        left: 0%;
+      }
+      a {
+        color: white;
+        transition: all 0.5s;
+      }
+    }
+    @include tablet {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 85%;
+      margin-bottom: 2%;
+      li {
+        text-align: center;
+        padding-left: 0vw;
+        font-size: $navSizePH;
+        padding-block: 2vw;
+      }
+    }
+  }
+  .cut-2-about-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 5vw;
+    width: 67%;
+    gap: 0 7vw;
+    > h2 {
+      width: 100%;
+      text-align: center;
+      font-family: $sans;
+      font-size: $subTitleSize;
+      font-weight: 500;
+      color: #534741;
+      background-color: #f1e5d1;
+      letter-spacing: 2px;
+      padding: 1vw 0vw;
+      border-bottom: 1px solid #c7b299;
+    }
+    @include tablet {
+      width: 85%;
+      padding-left: 0vw;
+      > h2 {
+        font-size: $contentSizePH;
+        padding: 3vw 0vw;
+      }
+    }
+  }
+  #accordion {
+    width: 100%;
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      svg {
+        width: 1.25vw;
+        height: 1.25vw;
+        fill: #998675;
+        transition-delay: 0.5s;
+        transition: all 0.5s;
+      }
+    }
+    .ui-state-active {
+      svg {
+        transform: rotate(45deg);
+        transition-delay: 0.5s;
+        transition: all 0.5s;
+      }
+    }
+    .ui-icon {
+      display: none;
+    }
+    @include tablet {
+      h3 {
+        font-size: $contentSizePH;
+        svg {
+          width: 5vw;
+          height: 5vw;
+        }
+      }
+    }
+  }
+  .accordion-content {
+    background-color: #f1e5d1;
+    padding-left: 6vw !important;
+    p {
+      font-weight: 500;
+      font-family: $sans;
+      line-height: 1.8;
+      color: #534741;
+      padding: 1vw 0vw;
+    }
+    @include tablet {
+      font-size: $navSizePH;
+    }
+  }
+  .ui-accordion .ui-accordion-header {
+    margin: 0;
+    border: 0;
+    font-size: $subTitleSize;
+    font-family: $sans;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #c7b299;
+    background-color: white;
+    color: #534741;
+    padding: 1vw 6vw !important;
+    @include tablet {
+      padding: 3vw 6vw !important;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+#about-contact {
+  .cut-1-container {
+    position: relative;
+    padding-top: 0%;
+    @include tablet {
+      padding-top: 10%;
+    }
+  }
+  .cut-1-para {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 47%;
+    left: 12%;
+    width: 20vw;
+    h1 {
+      font-family: $sans;
+      font-weight: 400;
+      font-size: 2.75vw;
+      color: white;
+      letter-spacing: 2px;
+    }
+    h3 {
+      font-family: $ubu;
+      font-weight: 400;
+      font-size: 1.5vw;
+      color: white;
+      letter-spacing: 2px;
+    }
+    .cut-1-para-line {
+      width: 100%;
+      height: 1px;
+      margin: 0.75vw 0;
+      background-color: white;
+    }
+    @include tablet {
+      width: 37%;
+      left: 10%;
+      h1 {
+        font-size: $mainTitlePH;
+        letter-spacing: 2px;
+      }
+      h3 {
+        font-size: $navSizePH;
+        letter-spacing: 1px;
+      }
+      .cut-1-para-line {
+        margin: 4% 0;
+      }
+    }
+  }
+
+  //表單
+  .cut-2-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    width: 100%;
+  }
+  .cut-2-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 6%;
+    h1 {
+      font-size: $mainTitle;
+      font-family: $sans;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #534741;
+    }
+    .cut-2-title-line {
+      width: 30%;
+      height: 1px;
+      margin-top: 2%;
+      background-color: #c7b299;
+    }
+    @include tablet {
+      h1 {
+        font-size: $mainTitlePH;
+      }
+      .cut-2-title-line {
+        width: 75%;
+        margin-top: 4%;
+        margin-bottom: 6%;
+      }
+    }
+  }
+  .cut-2-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 12%;
+    @include tablet {
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  .cut-2-content-map {
+    width: 42%;
+    height: 28.75vw;
+    @include tablet {
+      width: 85%;
+      height: 60vw;
+      margin-top: 10vw;
+    }
+  }
+
+  .cut-2-content-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    padding-left: 3%;
+    .cut-2-content-form-para {
+      font-family: $sans;
+      font-size: $navSize;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      font-weight: 500;
+      line-height: 2;
+      margin-bottom: 8%;
+      color: #534741;
+    }
+    @include tablet {
+      width: 85%;
+      padding-left: 0;
+      .cut-2-content-form-para {
+        font-size: $contentSizePH;
+        font-weight: 500;
+        margin-top: 5%;
+      }
+    }
+  }
+  #form-main {
+    width: 100%;
+  }
+  .form-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 4%;
+    @include tablet {
+      margin-bottom: 6%;
+    }
+  }
+  .form-input:nth-child(4) {
+    margin-bottom: 0;
+  }
+  .form-input-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    label {
+      font-size: $contentSize;
+      font-family: $sans;
+      color: #534741;
+      letter-spacing: 2px;
+      width: 8%;
+    }
+    input {
+      font-size: $contentSize;
+      font-family: $sans;
+      background-color: transparent;
+      border: none;
+      width: 90%;
+      letter-spacing: 2px;
+    }
+    textarea {
+      font-size: $contentSize;
+      font-family: $sans;
+      background-color: transparent;
+      resize: none;
+      border: none;
+      width: 100%;
+    }
+    @include tablet {
+      label {
+        font-size: $contentSizePH;
+        font-weight: 500;
+        width: 15%;
+      }
+      input {
+        font-size: $contentSizePH;
+        width: 82%;
+      }
+      textarea {
+        font-size: $contentSizePH;
+        height: 18vw;
+      }
+    }
+  }
+  .form-input-line {
+    width: 100%;
+    height: 1px;
+    margin-top: 2%;
+    background-color: #b3b3b3;
+  }
+  .form-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 8%;
+    button {
+      font-weight: 500;
+      font-family: $ubu;
+      font-size: $navSize;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: #534741;
+      border: 1px solid #c7b299;
+      border-radius: 10px;
+      padding: 0.5vw 1.5vw;
+      cursor: pointer;
+      margin: 0 auto;
+      background-color: white;
+    }
+    @include tablet {
+      margin-top: 12%;
+      margin-bottom: 25%;
+      button {
+        font-size: $navSizePH;
+        padding: 2.25vw 5vw;
+      }
+    }
+  }
+}

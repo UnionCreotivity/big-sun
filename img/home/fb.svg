@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.96 30.94">
+  <g id="header">
+    <g>
+      <rect x=".71" y=".25" width="30" height="30" rx="15" ry="15" fill="none" stroke="#c7b299" stroke-miterlimit="10" stroke-width=".5"/>
+      <g id="Page-1">
+        <g id="Dribbble-Light-Preview">
+          <g id="icons">
+            <path id="facebook-_176_" data-name="facebook-[#176]" d="M17.56,26.64v-9.62h2.92l.48-4.28h-3.4v-2.08c0-1.1,.03-2.19,1.57-2.19h1.56v-3.06s-1.34-.15-2.69-.15c-2.83,0-4.6,1.77-4.6,5.03v2.46h-3.13v4.28h3.13v9.62h4.17Z" fill="#998675" fill-rule="evenodd"/>
+          </g>
+        </g>
+      </g>
+      <rect y=".33" width="30.61" height="30.61" rx="4.4" ry="4.4" fill="#0071bc"/>
+      <g id="Page-1-2" data-name="Page-1">
+        <g id="Dribbble-Light-Preview-2" data-name="Dribbble-Light-Preview">
+          <g id="icons-2" data-name="icons">
+            <path id="facebook-_176_-2" data-name="facebook-[#176]" d="M17.18,25.94v-9.28h2.82l.46-4.12h-3.28v-2.01c0-1.06,.03-2.11,1.51-2.11h1.5v-2.95s-1.29-.14-2.6-.14c-2.73,0-4.43,1.71-4.43,4.84v2.37h-3.01v4.12h3.01v9.28h4.02Z" fill="#fff" fill-rule="evenodd"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

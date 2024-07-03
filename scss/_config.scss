@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800&display=swap"); //黑體
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap"); //明體
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"); //ubuntu
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"); //swiper css
+@import url("../css/jquery-ui.min.css");
+@import url("../css/hamburger.css");
+
+//字型
+$sans: "Noto Sans TC", sans-serif; //黑體
+$serif: "Noto Serif TC", serif; //明體
+$ubu: "Ubuntu", sans-serif; //ubuntu
+
+@mixin laptop() {
+  @media all and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media all and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media all and (max-width: 500px) {
+    @content;
+  }
+}
+
+//字型大小 電腦版
+$mainTitle: 2vw;
+$subTitleSize: 1vw; //小標
+$contentSize: 0.9vw; //內文
+$navSize: 0.8vw; //內文
+
+//字型大小 平板
+
+//字型大小 手機版
+$mainTitlePH: 5vw;
+$subTitleSizePH: 4.25vw; //小標
+$contentSizePH: 3.75vw; //內文
+$navSizePH: 3.25vw; //內文

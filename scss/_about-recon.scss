@@ -1,0 +1,308 @@
+#about_recon {
+  .cut-1-container {
+    position: relative;
+    padding-top: 0%;
+    @include tablet {
+      padding-top: 10%;
+    }
+  }
+  .cut-1-para {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 47%;
+    left: 12%;
+    width: 20vw;
+    h1 {
+      font-family: $sans;
+      font-weight: 400;
+      font-size: 2.75vw;
+      color: white;
+      letter-spacing: 2px;
+    }
+    h3 {
+      font-family: $ubu;
+      font-weight: 400;
+      font-size: 1.5vw;
+      color: white;
+      letter-spacing: 2px;
+    }
+    .cut-1-para-line {
+      width: 100%;
+      height: 1px;
+      margin: 0.75vw 0;
+      background-color: white;
+    }
+    @include tablet {
+      width: 37%;
+      left: 10%;
+      h1 {
+        font-size: $mainTitlePH;
+        letter-spacing: 2px;
+      }
+      h3 {
+        font-size: $navSizePH;
+        letter-spacing: 1px;
+      }
+      .cut-1-para-line {
+        margin: 4% 0;
+      }
+    }
+  }
+
+  //第2cut
+  .cut-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cut-2-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+    @include tablet {
+      width: 85%;
+      flex-direction: column;
+    }
+  }
+  .cut-2-left {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .cut-2-right {
+    width: 43%;
+    h2 {
+      font-size: $mainTitle;
+      font-family: $serif;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #534741;
+    }
+    .cut-2-right-line {
+      width: 40%;
+      height: 1px;
+      background-color: #c7b299;
+      margin-top: 5%;
+      margin-bottom: 9%;
+    }
+    @include tablet {
+      width: 100%;
+      margin-top: 4%;
+      h2 {
+        font-size: $mainTitlePH;
+        font-weight: 600;
+      }
+      .cut-2-right-line {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+      }
+    }
+  }
+  .cut-2-right-ul {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: $navSize;
+      font-family: $sans;
+      font-weight: 400;
+      color: #534741;
+      list-style-type: none;
+      letter-spacing: 2px;
+    }
+    .cut-2-right-li-content {
+      margin-left: 1%;
+    }
+    .cut-2-right-li-line {
+      height: 1px;
+      width: 90%;
+      margin-block: 2%;
+      background-color: #736357;
+    }
+    @include tablet {
+      li {
+        display: flow-root;
+        font-size: $contentSizePH;
+      }
+      .cut-2-right-li-name {
+        float: left;
+      }
+      .cut-2-right-li-line {
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+
+  //第3cut
+  .cut-3-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h5 {
+      font-size: $subTitleSize;
+      font-family: $sans;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #534741;
+      margin-top: 5%;
+      margin-bottom: 3%;
+    }
+    @include tablet {
+      h5 {
+        font-size: $mainTitlePH;
+        margin-top: 5vw;
+        margin-bottom: 7vw;
+      }
+    }
+  }
+  .cut-3-content {
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+  .cut-3-content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    margin-block: 5%;
+    li {
+      list-style-type: none;
+    }
+    @include tablet {
+      width: 85%;
+      margin-block: 12.5vw;
+    }
+  }
+  .cut-3-content-inner-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-block: 1%;
+    p {
+      font-size: $subTitleSize;
+      font-family: $sans;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #534741;
+    }
+
+    .inner-item-time {
+      flex: 0 1 12%;
+    }
+    .inner-item-content {
+      flex: 1 1 70%;
+      padding-left: 8%;
+    }
+    .inner-item-href {
+      flex: 0 1 10%;
+      display: flex;
+      justify-content: center;
+      a {
+        font-size: $subTitleSize;
+        font-family: $ubu;
+        border-radius: 5px;
+        padding-block: 0.5vw;
+        padding-inline: 1.25vw;
+        letter-spacing: 2px;
+        font-weight: 500;
+        background-color: #c7b299;
+        text-decoration: none;
+        color: white;
+      }
+    }
+    @include tablet {
+      margin-block: 3vw;
+      p {
+        font-size: $navSizePH;
+      }
+      .inner-item-content {
+        padding-left: 0%;
+      }
+      .inner-item-href {
+        a {
+          font-size: 3vw;
+          font-family: $ubu;
+          border-radius: 5px;
+          padding-block: 2vw;
+          padding-inline: 4.25vw;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+  .cut-3-content-inner-line {
+    width: 100%;
+    height: 1px;
+    background-color: #c7b299;
+  }
+  .vertical-line {
+    height: 2.5vw;
+    width: 1px;
+    background-color: #c7b299;
+    @include mobile {
+      margin-inline: 3vw;
+      height: 6.5vw;
+    }
+  }
+
+  //第4cut
+  .cut-4-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    @include tablet {
+      margin-top: 7vw;
+    }
+  }
+  .cut-4-map {
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 30vh;
+      display: block;
+    }
+    @include tablet {
+      iframe {
+        height: 70vw;
+      }
+    }
+  }
+  .cut-4-back {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 12%;
+    a {
+      display: inline-block;
+      font-weight: 500;
+      font-family: $ubu;
+      font-size: $navSize;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: #534741;
+      border: 1px solid #c7b299;
+      border-radius: 10px;
+      padding: 0.5vw 2vw;
+    }
+    @include tablet {
+      margin-top: 7%;
+      margin-bottom: 25%;
+      a {
+        margin: 0 auto;
+        font-size: $navSizePH;
+        font-weight: 500;
+        padding: 2.25vw 5vw;
+      }
+    }
+  }
+}

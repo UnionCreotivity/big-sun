@@ -1,0 +1,106 @@
+[
+  {
+    "city": "台北市",
+    "name": "圓山新貴族",
+    "build": "自地自建",
+    "year": "2007",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "美樂地",
+    "build": "購地及合建",
+    "year": "2008",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "東京Smart",
+    "build": "自地自建",
+    "year": "2009",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "新北市",
+    "name": "玫瑰春天",
+    "build": "自地自建",
+    "year": "2008",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "臻愛",
+    "build": "自地自建",
+    "year": "2009",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "杏林文化",
+    "build": "合建",
+    "year": "2015",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "捷運樂活",
+    "build": "合建",
+    "year": "2016",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "捷運新町",
+    "build": "合建",
+    "year": "2021",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "瑞安薈",
+    "build": "合建",
+    "year": "2017",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "誠隆建設社子案",
+    "build": "工程承攬",
+    "year": "2005",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "國兆建設京華小天后",
+    "build": "工程承攬",
+    "year": "2006",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "泰順街電梯住宅",
+    "build": "工程承攬",
+    "year": "2006",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  },
+  {
+    "city": "台北市",
+    "name": "公館街七層住宅",
+    "build": "工程承攬",
+    "year": "2007",
+    "img": "./img/about-project/project-item-1.webp",
+    "link": "About_project_inner.html"
+  }
+]

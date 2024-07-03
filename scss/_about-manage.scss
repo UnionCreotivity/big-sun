@@ -1,0 +1,413 @@
+#about_manage {
+  .cut-1-container {
+    position: relative;
+    padding-top: 0%;
+    @include tablet {
+      padding-top: 10%;
+    }
+  }
+  .cut-1-para {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 47%;
+    left: 12%;
+    width: 16vw;
+    h1 {
+      font-family: $sans;
+      font-weight: 400;
+      font-size: 2.75vw;
+      letter-spacing: 2px;
+      color: white;
+    }
+    h3 {
+      font-family: $ubu;
+      font-weight: 400;
+      font-size: 1.5vw;
+      letter-spacing: 2px;
+      color: white;
+    }
+    .cut-1-para-line {
+      width: 100%;
+      height: 1px;
+      margin: 0.75vw 0;
+      background-color: white;
+    }
+    @include tablet {
+      width: 37%;
+      left: 10%;
+      h1 {
+        font-size: $mainTitlePH;
+        letter-spacing: 2px;
+      }
+      h3 {
+        font-size: $navSizePH;
+        letter-spacing: 1px;
+      }
+      .cut-1-para-line {
+        margin: 4% 0;
+      }
+    }
+  }
+
+  //第2cut
+  .cut-2-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 8%;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .cut-2-about-menu-ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    width: 13vw;
+    color: #736357;
+    --linkleft: -105%;
+    li {
+      font-size: $subTitleSize;
+      font-family: $sans;
+      font-weight: 400;
+      color: #736357;
+      width: 100%;
+      letter-spacing: 2px;
+      margin-bottom: 7%;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: var(--linkleft);
+        width: 100%;
+        height: 100%;
+        background-color: #b28c67;
+        transition: all 0.5s;
+        z-index: -1;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: #736357;
+      width: 100%;
+      padding-left: 3vw;
+      padding-block: 0.5vw;
+      transition: all 0.5s;
+    }
+    li:hover {
+      &::after {
+        left: 0%;
+      }
+      a {
+        color: white;
+        transition: all 0.5s;
+      }
+    }
+    @include tablet {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 85%;
+      li {
+        text-align: center;
+        padding-left: 0vw;
+        font-size: $navSizePH;
+        padding-block: 2vw;
+      }
+    }
+  }
+  .cut-2-about-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 5vw;
+    @include tablet {
+      width: 85%;
+      padding-left: 0vw;
+    }
+  }
+  .cut-2-about-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0 7vw;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  .cut-2-about-item-2 {
+    margin-top: 4%;
+    @include tablet {
+      flex-direction: column-reverse;
+      margin-top: 7%;
+    }
+  }
+  .cut-2-about-item-3 {
+    gap: 0 11vw;
+    margin-top: 4%;
+  }
+  .cut-2-about-img {
+    width: 35vw;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .cut-2-about-img-2 {
+    width: 14vw;
+    margin-left: 13%;
+    @include tablet {
+      margin-left: 0%;
+      width: 50%;
+    }
+  }
+  .cut-2-about-img-3 {
+    width: 28vw;
+    margin-left: 4%;
+    @include tablet {
+      margin-left: 0%;
+      margin-top: 7%;
+      width: 85%;
+    }
+  }
+  .cut-2-about-para {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 28vw;
+    letter-spacing: 2px;
+    h5 {
+      font-family: $ubu;
+      font-weight: 400;
+      font-size: 1.2vw;
+      color: #534741;
+    }
+    p {
+      font-family: $sans;
+      font-size: $contentSize;
+      font-weight: 500;
+      padding: 0vw 0.25vw;
+      line-height: 1.8;
+      color: #534741;
+    }
+    .cut-2-about-para-line {
+      width: 100%;
+      height: 1px;
+      background-color: #c7b299;
+      margin-top: 1.5vw;
+      margin-bottom: 1.5vw;
+    }
+    @include tablet {
+      width: 95%;
+      h5 {
+        font-size: $mainTitlePH;
+        font-weight: 500;
+        margin-top: 7%;
+      }
+      p {
+        font-size: $contentSizePH;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      .cut-2-about-para-line {
+        margin-top: 7%;
+        margin-bottom: 4%;
+      }
+    }
+  }
+  .cut-2-about-para-2 {
+    margin-left: 4%;
+    @include tablet {
+      margin-left: 0%;
+      margin-top: 5%;
+    }
+  }
+  .cut-2-about-para-3 {
+    br {
+      display: none;
+    }
+    @include tablet {
+      br {
+        display: block;
+      }
+      margin-top: 5%;
+    }
+  }
+  //第3cut
+  .cut-3-container {
+    background: url("../img/about-manage/about-manage-circle-big-pic.webp");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin-top: 6%;
+    gap: 0 3vw;
+    @include tablet {
+      background: url("../img/about-manage/about-manage-circle-big-pic-ph.webp");
+      background-repeat: no-repeat;
+      background-position: 100%;
+      background-size: cover;
+      flex-direction: column;
+      margin-top: 8%;
+      padding-top: 15%;
+      padding-bottom: 5%;
+    }
+  }
+  .cut-3-circle {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+      width: 60vw;
+      height: 60vw;
+      margin-bottom: 10%;
+    }
+  }
+  .cut-3-circle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 50%;
+    border: 1px solid #c7b299;
+    width: 90%;
+    height: 90%;
+    padding: 1vw;
+    h1 {
+      font-family: $serif;
+      font-size: 2.5vw;
+      color: #736357;
+    }
+    h5 {
+      font-family: $ubu;
+      font-weight: 400;
+      font-size: 0.9vw;
+      color: #b3b3b3;
+      letter-spacing: 2px;
+    }
+    p {
+      font-family: $sans;
+      font-weight: 400;
+      font-size: $contentSize;
+      color: #999999;
+      text-align: center;
+      padding: 0vw 1.5vw;
+      line-height: 1.75;
+    }
+    @include tablet {
+      padding: 5% 1%;
+      h1 {
+        font-size: 7.5vw;
+      }
+      h5 {
+        font-size: 3vw;
+      }
+      p {
+        font-size: $navSizePH;
+        padding: 0 7.5%;
+      }
+    }
+  }
+  .cut-3-circle-icon {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+  .icon-safety {
+    width: 2.5vw;
+    @include tablet {
+      width: 6.5vw;
+    }
+  }
+  .cut-3-circle-line {
+    width: 100%;
+    height: 1px;
+    margin: 1vw 0;
+    background-color: #c7b299;
+    @include tablet {
+      width: 90%;
+      margin: 4% 0;
+    }
+  }
+  .cut-3-circle-line-2 {
+    @include tablet {
+      margin: 4% 0 2% 0;
+    }
+  }
+  //第4cut
+  .cut-4-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding-top: 6%;
+    padding-bottom: 3%;
+    @include tablet {
+      padding-top: 10%;
+      padding-bottom: 20%;
+    }
+  }
+  .cut-4-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 7%;
+    h2 {
+      font-family: $sans;
+      font-weight: 500;
+      font-size: 1.75vw;
+      letter-spacing: 3px;
+      color: #534741;
+    }
+    p {
+      font-family: $ubu;
+      font-size: 0.9vw;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #534741;
+    }
+    @include tablet {
+      margin-bottom: 10%;
+      h2 {
+        font-size: $mainTitlePH;
+      }
+      p {
+        font-size: $navSizePH;
+      }
+    }
+  }
+  .cut-4-pic {
+    width: 70%;
+    @include tablet {
+      width: 85%;
+    }
+  }
+}

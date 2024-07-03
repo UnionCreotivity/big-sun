@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <title>聯絡我們</title>
+  </head>
+  <body>
+    <div class="loading-page">
+      <div class="loading-logo"><img src="./img/LOGO.png" alt="logo" /></div>
+      <div class="box-para">
+        <div class="loading-progress">0</div>
+        <span>%</span>
+      </div>
+    </div>
+    <nav id="nav"></nav>
+    <main id="about-contact">
+      <section class="cut-1">
+        <div class="cut-1-container">
+          <picture>
+            <source
+              media="(max-width:1024px)"
+              srcset="./img/about-contact/contact-big-pic-ph.webp"
+            />
+            <img
+              src="./img/about-contact/contact-big-pic.webp"
+              alt="contact-big-pic"
+            />
+          </picture>
+          <div class="cut-1-para">
+            <h1>聯絡大賞</h1>
+            <div class="cut-1-para-line"></div>
+            <h3>CONTACT US</h3>
+          </div>
+        </div>
+      </section>
+      <section class="cut-2">
+        <div class="cut-2-content">
+          <div class="cut-2-content-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.858359083633!2d121.49559057695885!3d25.004928439458578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9d3cd5c59df%3A0xb5e3a365f7333d5d!2zMjM15paw5YyX5biC5Lit5ZKM5Y2A5rC45ZKM6Lev!5e0!3m2!1szh-TW!2stw!4v1719307714879!5m2!1szh-TW!2stw"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="cut-2-content-form">
+            <div class="cut-2-content-form-para">
+              <p>我們非常重視您的意見與需求 !</p>
+              <p>
+                無論您有任何問題、建議或需要進一步的相關資訊，請填寫以下表單。
+              </p>
+              <p>我們的專業團隊將在最短的時間內與您聯繫。</p>
+            </div>
+
+            <form id="form-main">
+              <div class="form-input">
+                <div class="form-input-main">
+                  <label for="ca_name">姓名:</label>
+                  <input type="text" name="name" id="ca_name" />
+                </div>
+                <div class="form-input-line"></div>
+              </div>
+              <div class="form-input">
+                <div class="form-input-main">
+                  <label for="ca_tel">電話:</label>
+                  <input type="tel" name="phone" id="ca_tel" />
+                </div>
+                <div class="form-input-line"></div>
+              </div>
+              <div class="form-input">
+                <div class="form-input-main">
+                  <label for="ca_email">信箱:</label>
+                  <input type="email" name="email" id="ca_email" />
+                </div>
+                <div class="form-input-line"></div>
+              </div>
+              <div class="form-input">
+                <div class="form-input-main">
+                  <label for="ca_comment">留言:</label>
+                  <textarea name="comment" id="ca_comment"></textarea>
+                </div>
+                <div class="form-input-line"></div>
+              </div>
+              <div class="form-button">
+                <button>SEND</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <h3>大賞建設股份有限公司</h3>
+      <div class="footer-bottom">
+        <p>大賞建設股份有限公司版權所有 ©2024BIG-SUN.AIl Rights Reserved</p>
+        <p class="footer-bottom-line-1 pc">|</p>
+        <p class="footer-bottom-line-1 ph">-</p>
+        <p>新北市永和區中和路345號8樓</p>
+        <p class="footer-bottom-line-2">|</p>
+        <div class="footer-bottom-second">
+          <p>TEL:02-2924-7056</p>
+          <p class="footer-bottom-line-3">|</p>
+          <p>FAX:02-2924-6528</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/additional-methods.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/loading.js"></script>
+    <script>
+      $(window).on("load", function () {
+        function debounce(cb, delay = 500) {
+          let timeout;
+          console.log("debounce");
+          return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              cb(...args);
+            }, delay);
+          };
+        }
+
+        //表單內容👇
+        $("#form-main")
+          .submit(function (e) {
+            e.preventDefault();
+          })
+          .validate({
+            errorClass: "error",
+            rules: {
+              name: {
+                required: true,
+                maxlength: 12,
+              },
+              phone: {
+                required: true,
+                pattern:
+                  /^(09[0-9]{8}|(0)([0-9]{1})([-]?)([0-9]{8})|(0)([0-9]{1})([-]?)([0-4]{4})([-]?)([0-4]{4}))$/,
+              },
+              comment: {
+                maxlength: 500,
+              },
+            },
+            messages: {
+              name: {
+                maxlength: "請勿超過12個字元",
+                required: "必填",
+              },
+              phone: {
+                pattern: "請輸入正確的電話號碼",
+                required: "必填",
+              },
+              email: "請輸入正確的電子信箱",
+              comment: {
+                maxlength: "請勿超過500個字元",
+              },
+            },
+
+            errorPlacement: function (err, el) {
+              el.parent(".form-input-main").after(err);
+            },
+            submitHandler: debounce(function (form) {
+              if ($("#form-main").valid()) {
+                // form.submit();
+                alert("執行");
+              } else {
+                console.log("錯誤");
+              }
+            }, 500),
+          });
+        $("#form-main input[name='phone']").on("keyup", function () {
+          $(this).valid();
+        });
+      });
+    </script>
+  </body>
+</html>
