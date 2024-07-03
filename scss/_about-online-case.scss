@@ -120,6 +120,14 @@
     }
     @include tablet {
       h2 {
+        font-size: $mainTitleTB;
+      }
+      h3 {
+        font-size: $contentSizeTB;
+      }
+    }
+    @include mobile {
+      h2 {
         font-size: $mainTitlePH;
       }
       h3 {
@@ -155,6 +163,20 @@
       color: #736357;
     }
     @include tablet {
+      flex-direction: column;
+      .cut-2-item-para-left-2-p {
+        width: 100%;
+        justify-content: flex-start;
+        line-height: 1.8;
+      }
+      br {
+        display: block;
+      }
+      p {
+        font-size: $contentSizeTB;
+      }
+    }
+    @include mobile {
       flex-direction: column;
       .cut-2-item-para-left-2-p {
         width: 100%;
@@ -205,6 +227,16 @@
       background-color: #999999;
     }
     @include tablet {
+      margin-inline: 3%;
+      p {
+        font-size: 2.75vw;
+      }
+      &::after {
+        height: 100%;
+        right: -20%;
+      }
+    }
+    @include mobile {
       margin-inline: 3%;
       p {
         font-size: $navSizePH;

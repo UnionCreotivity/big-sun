@@ -35,21 +35,22 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
+    // @include tablet {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
   }
 
   //第2cut
@@ -94,6 +95,19 @@
       width: 100%;
       margin-top: 4%;
       h2 {
+        font-size: $mainTitleTB;
+        font-weight: 600;
+      }
+      .cut-2-right-line {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 4%;
+      h2 {
         font-size: $mainTitlePH;
         font-weight: 600;
       }
@@ -126,6 +140,22 @@
       background-color: #736357;
     }
     @include tablet {
+      .cut-2-right-li-content {
+        margin-left: 0%;
+      }
+      li {
+        display: flow-root;
+        font-size: $contentSizeTB;
+      }
+      .cut-2-right-li-name {
+        float: left;
+      }
+      .cut-2-right-li-line {
+        display: flex;
+        width: 100%;
+      }
+    }
+    @include mobile {
       li {
         display: flow-root;
         font-size: $contentSizePH;
@@ -156,6 +186,13 @@
       margin-bottom: 3%;
     }
     @include tablet {
+      h5 {
+        font-size: $mainTitleTB;
+        margin-top: 5vw;
+        margin-bottom: 7vw;
+      }
+    }
+    @include mobile {
       h5 {
         font-size: $mainTitlePH;
         margin-top: 5vw;
@@ -223,6 +260,25 @@
     @include tablet {
       margin-block: 3vw;
       p {
+        font-size: 2.75vw;
+      }
+      .inner-item-content {
+        padding-left: 0%;
+      }
+      .inner-item-href {
+        a {
+          font-size: 2.5vw;
+          font-family: $ubu;
+          border-radius: 5px;
+          padding-block: 1.75vw;
+          padding-inline: 3.25vw;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    @include mobile {
+      margin-block: 3vw;
+      p {
         font-size: $navSizePH;
       }
       .inner-item-content {
@@ -249,7 +305,7 @@
     height: 2.5vw;
     width: 1px;
     background-color: #c7b299;
-    @include mobile {
+    @include tablet {
       margin-inline: 3vw;
       height: 6.5vw;
     }
@@ -295,6 +351,16 @@
       padding: 0.5vw 2vw;
     }
     @include tablet {
+      margin-top: 7%;
+      margin-bottom: 25%;
+      a {
+        margin: 0 auto;
+        font-size: 2.75vw;
+        font-weight: 500;
+        padding: 2vw 4vw;
+      }
+    }
+    @include mobile {
       margin-top: 7%;
       margin-bottom: 25%;
       a {

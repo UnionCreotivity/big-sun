@@ -35,21 +35,22 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
+    // @include tablet {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
   }
 
   //第2cut
@@ -129,6 +130,22 @@
       li {
         text-align: center;
         padding-left: 0vw;
+        font-size: 2.75vw;
+        padding-block: 2vw;
+      }
+    }
+    @include mobile {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 85%;
+      margin-bottom: 2%;
+      a {
+        padding-left: 0;
+      }
+      li {
+        text-align: center;
+        padding-left: 0vw;
         font-size: $navSizePH;
         padding-block: 2vw;
       }
@@ -194,6 +211,17 @@
     }
     @include tablet {
       h1 {
+        font-size: $mainTitleTB;
+      }
+      h3 {
+        font-size: $contentSizeTB;
+      }
+      .cut-2-about-main-title-line {
+        width: 110%;
+      }
+    }
+    @include mobile {
+      h1 {
         font-size: $mainTitlePH;
       }
       h3 {
@@ -248,6 +276,18 @@
     @include tablet {
       margin: 6% 0;
       p {
+        font-size: $contentSizeTB;
+      }
+      .line {
+        height: 5vw;
+      }
+      .p-2 {
+        font-weight: 600;
+      }
+    }
+    @include mobile {
+      margin: 6% 0;
+      p {
         font-size: $contentSizePH;
       }
       .line {
@@ -272,6 +312,12 @@
       font-weight: 500;
       letter-spacing: 1px;
       @include tablet {
+        margin: 0 auto;
+        font-size: 2.75vw;
+        font-weight: 500;
+        padding: 2vw 4vw;
+      }
+      @include mobile {
         margin: 0 auto;
         font-size: $navSizePH;
         font-weight: 500;

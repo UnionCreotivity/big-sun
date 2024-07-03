@@ -35,21 +35,22 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
+    // @include tablet {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
   }
 
   //第2cut
@@ -96,6 +97,26 @@
       color: #534741;
     }
     @include tablet {
+      flex-direction: column;
+      select {
+        width: 55%;
+      }
+      .cut-2-search-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 5%;
+      }
+
+      option,
+      select,
+      .cut-2-search-item-label {
+        text-align: center;
+        font-size: 2.75vw;
+      }
+    }
+    @include mobile {
       flex-direction: column;
       select {
         width: 55%;
@@ -171,6 +192,18 @@
     @include tablet {
       margin: 6% 0;
       p {
+        font-size: $contentSizeTB;
+      }
+      .line {
+        height: 5vw;
+      }
+      .p-2 {
+        font-weight: 600;
+      }
+    }
+    @include mobile {
+      margin: 6% 0;
+      p {
         font-size: $contentSizePH;
       }
       .line {
@@ -196,6 +229,12 @@
       font-weight: 500;
       letter-spacing: 1px;
       @include tablet {
+        margin: 0 auto;
+        font-size: 2.75vw;
+        font-weight: 500;
+        padding: 2vw 4vw;
+      }
+      @include mobile {
         margin: 0 auto;
         font-size: $navSizePH;
         font-weight: 500;

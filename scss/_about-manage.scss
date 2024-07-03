@@ -35,21 +35,37 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
+    // @include tablet {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
+    // @include mobile {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
   }
 
   //第2cut
@@ -115,6 +131,21 @@
       }
     }
     @include tablet {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 85%;
+      a {
+        padding-left: 0;
+      }
+      li {
+        text-align: center;
+        padding-left: 0vw;
+        font-size: 2.75vw;
+        padding-block: 2vw;
+      }
+    }
+    @include mobile {
       align-items: center;
       justify-content: center;
       flex-direction: row;
@@ -214,6 +245,23 @@
       margin-bottom: 1.5vw;
     }
     @include tablet {
+      width: 95%;
+      h5 {
+        font-size: $mainTitleTB;
+        font-weight: 500;
+        margin-top: 7%;
+      }
+      p {
+        font-size: 2.75vw;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      .cut-2-about-para-line {
+        margin-top: 7%;
+        margin-bottom: 4%;
+      }
+    }
+    @include mobile {
       width: 95%;
       h5 {
         font-size: $mainTitlePH;
@@ -319,6 +367,19 @@
       line-height: 1.75;
     }
     @include tablet {
+      padding: 10% 1%;
+      h1 {
+        font-size: 6.5vw;
+      }
+      h5 {
+        font-size: 2.5vw;
+      }
+      p {
+        font-size: 2.75vw;
+        padding: 0 7.5%;
+      }
+    }
+    @include mobile {
       padding: 5% 1%;
       h1 {
         font-size: 7.5vw;
@@ -399,6 +460,15 @@
       color: #534741;
     }
     @include tablet {
+      margin-bottom: 10%;
+      h2 {
+        font-size: $mainTitleTB;
+      }
+      p {
+        font-size: 2.75vw;
+      }
+    }
+    @include mobile {
       margin-bottom: 10%;
       h2 {
         font-size: $mainTitlePH;

@@ -35,21 +35,7 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
   }
 
   //第2cut
@@ -104,6 +90,12 @@
     }
     @include tablet {
       h2 {
+        font-size: $mainTitleTB;
+        font-weight: 600;
+      }
+    }
+    @include mobile {
+      h2 {
         font-size: $mainTitlePH;
         font-weight: 600;
       }
@@ -129,6 +121,13 @@
       color: #736357;
     }
     @include tablet {
+      flex-direction: column;
+      p {
+        font-size: $contentSizeTB;
+        font-weight: 500;
+      }
+    }
+    @include mobile {
       flex-direction: column;
       p {
         font-size: $contentSizePH;
@@ -200,6 +199,16 @@
       background-color: #999999;
     }
     @include tablet {
+      margin-inline: 3%;
+      p {
+        font-size: 2.75vw;
+      }
+      &::after {
+        height: 100%;
+        right: -20%;
+      }
+    }
+    @include mobile {
       margin-inline: 3%;
       p {
         font-size: $navSizePH;
@@ -300,6 +309,20 @@
       margin-top: 7%;
       gap: 3vw 0;
       p {
+        font-size: 2.75vw;
+        font-weight: 500;
+      }
+      li {
+        &::after {
+          bottom: -1.5vw;
+        }
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 7%;
+      gap: 3vw 0;
+      p {
         font-size: $navSizePH;
         font-weight: 500;
       }
@@ -384,6 +407,20 @@
       padding-inline: 0;
       margin-top: 5%;
       p {
+        font-size: $contentSizeTB;
+        br {
+          display: none;
+        }
+      }
+      p:nth-child(1) {
+        margin-bottom: 0;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      padding-inline: 0;
+      margin-top: 5%;
+      p {
         font-size: $contentSizePH;
         br {
           display: none;
@@ -422,6 +459,20 @@
       margin-bottom: 10%;
     }
     @include tablet {
+      width: 100%;
+      padding-inline: 0;
+      margin-top: 5%;
+      p {
+        font-size: $contentSizeTB;
+        br {
+          display: none;
+        }
+      }
+      p:nth-child(1) {
+        margin-bottom: 0%;
+      }
+    }
+    @include mobile {
       width: 100%;
       padding-inline: 0;
       margin-top: 5%;
@@ -466,6 +517,16 @@
       margin-bottom: 10%;
       a {
         margin: 0 auto;
+        font-size: 2.75vw;
+        font-weight: 500;
+        padding: 2vw 4vw;
+      }
+    }
+    @include mobile {
+      margin-top: 7%;
+      margin-bottom: 10%;
+      a {
+        margin: 0 auto;
         font-size: 3.25vw;
         font-weight: 500;
         padding: 2.25vw 5vw;
@@ -502,6 +563,16 @@
       background-color: #c7b299;
     }
     @include tablet {
+      h1 {
+        font-size: $mainTitleTB;
+      }
+      .cut-5-title-line {
+        width: 75%;
+        margin-top: 4%;
+        margin-bottom: 6%;
+      }
+    }
+    @include mobile {
       h1 {
         font-size: $mainTitlePH;
       }
@@ -550,6 +621,15 @@
       color: #534741;
     }
     @include tablet {
+      width: 85%;
+      padding-left: 0;
+      h3 {
+        font-size: $contentSizeTB;
+        font-weight: 500;
+        margin-top: 5%;
+      }
+    }
+    @include mobile {
       width: 85%;
       padding-left: 0;
       h3 {
@@ -607,6 +687,21 @@
     }
     @include tablet {
       label {
+        font-size: $contentSizeTB;
+        font-weight: 500;
+        width: 15%;
+      }
+      input {
+        font-size: $contentSizeTB;
+        width: 82%;
+      }
+      textarea {
+        font-size: $contentSizeTB;
+        height: 18vw;
+      }
+    }
+    @include mobile {
+      label {
         font-size: $contentSizePH;
         font-weight: 500;
         width: 15%;
@@ -646,6 +741,14 @@
       margin: 0 auto;
     }
     @include tablet {
+      margin-top: 12%;
+      margin-bottom: 25%;
+      button {
+        font-size: 2.75vw;
+        padding: 2.25vw 5vw;
+      }
+    }
+    @include mobile {
       margin-top: 12%;
       margin-bottom: 25%;
       button {

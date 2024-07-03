@@ -35,21 +35,22 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
+    // @include tablet {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
   }
   //第2cut
   .cut-2-container {
@@ -68,6 +69,13 @@
       letter-spacing: 5px;
     }
     @include tablet {
+      width: 85%;
+      h2 {
+        font-size: $mainTitleTB;
+        letter-spacing: 1px;
+      }
+    }
+    @include mobile {
       width: 85%;
       h2 {
         font-size: $mainTitlePH;
@@ -105,6 +113,12 @@
     @include tablet {
       width: 100%;
       p {
+        font-size: $contentSizeTB;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      p {
         font-size: $contentSizePH;
       }
     }
@@ -127,6 +141,10 @@
     letter-spacing: 2px;
     color: #736357;
     @include tablet {
+      font-size: 2.75vw;
+      align-self: flex-start;
+    }
+    @include mobile {
       font-size: $navSizePH;
       align-self: flex-start;
     }
@@ -153,6 +171,21 @@
       cursor: pointer;
     }
     @include tablet {
+      margin-top: 10%;
+      p {
+        font-size: 2.75vw;
+      }
+      .share {
+        width: 7vw;
+      }
+      .share-fb {
+        margin-inline: 3.5vw;
+      }
+      .share-line {
+        margin-right: 0vw;
+      }
+    }
+    @include mobile {
       margin-top: 10%;
       p {
         font-size: $navSizePH;
@@ -196,6 +229,16 @@
       padding: 0.75vw 2vw;
     }
     @include tablet {
+      margin-top: 7%;
+      margin-bottom: 25%;
+      a {
+        margin: 0 auto;
+        font-size: 2.75vw;
+        font-weight: 500;
+        padding: 2vw 4vw;
+      }
+    }
+    @include mobile {
       margin-top: 7%;
       margin-bottom: 25%;
       a {

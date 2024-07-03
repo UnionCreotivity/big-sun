@@ -86,6 +86,9 @@ section {
 .nav-left-icon {
   width: 7vw;
   @include tablet {
+    width: 20vw;
+  }
+  @include mobile {
     width: 25vw;
   }
 }
@@ -137,6 +140,37 @@ section {
     color: black;
   }
   @include tablet {
+    flex-direction: column;
+    margin-right: unset;
+    width: 100%;
+    li {
+      position: relative;
+      margin-bottom: 9vw;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 220%;
+        left: 50%;
+        height: 1px;
+        width: 50%;
+        background-color: #c7b299;
+        transform: translate(-50%, -50%);
+      }
+    }
+    li:last-child {
+      margin-bottom: 10vw;
+      &::after {
+        content: unset;
+      }
+    }
+    a {
+      font-size: $contentSizeTB;
+    }
+  }
+  @include mobile {
     flex-direction: column;
     margin-right: unset;
     width: 100%;

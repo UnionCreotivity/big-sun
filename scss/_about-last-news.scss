@@ -35,21 +35,22 @@
       margin: 0.75vw 0;
       background-color: white;
     }
-    @include tablet {
-      width: 37%;
-      left: 10%;
-      h1 {
-        font-size: $mainTitlePH;
-        letter-spacing: 2px;
-      }
-      h3 {
-        font-size: $navSizePH;
-        letter-spacing: 1px;
-      }
-      .cut-1-para-line {
-        margin: 4% 0;
-      }
-    }
+    @include cut1para();
+    // @include tablet {
+    //   width: 37%;
+    //   left: 10%;
+    //   h1 {
+    //     font-size: $mainTitlePH;
+    //     letter-spacing: 2px;
+    //   }
+    //   h3 {
+    //     font-size: $navSizePH;
+    //     letter-spacing: 1px;
+    //   }
+    //   .cut-1-para-line {
+    //     margin: 4% 0;
+    //   }
+    // }
   }
 
   //第2cut
@@ -114,6 +115,17 @@
     }
     @include tablet {
       .cut-2-item-para-time {
+        font-size: 2.75vw;
+      }
+      .cut-2-item-para-title {
+        font-size: $contentSizeTB;
+      }
+      .cut-2-item-para-p {
+        font-size: 2.75vw;
+      }
+    }
+    @include mobile {
+      .cut-2-item-para-time {
         font-size: $navSizePH;
       }
       .cut-2-item-para-title {
@@ -141,6 +153,12 @@
       border-radius: 10px;
       padding: 0.75vw 2vw;
       @include tablet {
+        margin: 0 auto;
+        font-size: 2.75vw;
+        font-weight: 500;
+        padding: 2vw 4vw;
+      }
+      @include mobile {
         margin: 0 auto;
         font-size: 3.25vw;
         font-weight: 500;

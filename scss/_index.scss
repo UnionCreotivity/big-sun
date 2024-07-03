@@ -6,6 +6,9 @@
     overflow: hidden;
     background-color: #f2f2f2;
     @include tablet {
+      height: 120vw;
+    }
+    @include mobile {
       height: 168vw;
     }
   }
@@ -16,6 +19,9 @@
       display: none;
     }
     @include tablet {
+      width: 5vw;
+    }
+    @include mobile {
       width: 6vw;
     }
   }
@@ -23,6 +29,9 @@
     top: 130%;
     left: 0;
     @include tablet {
+      top: 130%;
+    }
+    @include mobile {
       top: 150%;
     }
   }
@@ -30,6 +39,10 @@
     top: 130%;
     right: 80%;
     @include tablet {
+      top: 130%;
+      right: 75%;
+    }
+    @include mobile {
       top: 150%;
       right: 75%;
     }
@@ -60,6 +73,16 @@
       margin-top: 2%;
     }
     @include tablet {
+      top: 50%;
+      left: 14%;
+      h1 {
+        font-size: 6.5vw;
+      }
+      h2 {
+        font-size: 4.25vw;
+      }
+    }
+    @include mobile {
       top: 57%;
       left: 14%;
       h1 {
@@ -89,6 +112,19 @@
     @include tablet {
       margin-top: 5%;
       padding-right: 0%;
+      span {
+        flex: 0 1 50%;
+      }
+      p {
+        font-size: 2.25vw;
+      }
+    }
+    @include mobile {
+      margin-top: 5%;
+      padding-right: 0%;
+      span {
+        flex: 1 1;
+      }
       p {
         font-size: 3.25vw;
       }
@@ -169,6 +205,18 @@
       width: 85%;
       align-items: center;
       h2 {
+        font-size: $mainTitleTB;
+        margin: 6% auto;
+      }
+      p {
+        font-size: $contentSizeTB;
+        margin-bottom: 8%;
+      }
+    }
+    @include mobile {
+      width: 85%;
+      align-items: center;
+      h2 {
         font-size: $mainTitlePH;
         margin: 6% auto;
       }
@@ -188,6 +236,12 @@
     font-size: 0.8vw;
     letter-spacing: 1px;
     @include tablet {
+      margin: 0 auto;
+      font-size: 2.75vw;
+      font-weight: 500;
+      padding: 2vw 4vw;
+    }
+    @include mobile {
       margin: 0 auto;
       font-size: $navSizePH;
       font-weight: 500;
@@ -210,6 +264,12 @@
       margin-bottom: 4%;
     }
     @include tablet {
+      h2 {
+        font-size: $mainTitleTB;
+        margin: 6% auto;
+      }
+    }
+    @include mobile {
       h2 {
         font-size: $mainTitlePH;
         margin: 6% auto;
@@ -286,6 +346,28 @@
         h3 {
           position: unset;
           color: #736357;
+          font-size: $mainTitleTB;
+          margin: 6% 0;
+          font-weight: 500;
+        }
+      }
+      &:hover {
+        .cut-3-photo-wall-image-text {
+          background-color: unset;
+        }
+      }
+    }
+    @include mobile {
+      width: 100%;
+      .cut-3-photo-wall-image-text {
+        position: unset;
+        padding: 0;
+        opacity: 1;
+        background-color: unset;
+        justify-content: flex-start;
+        h3 {
+          position: unset;
+          color: #736357;
           font-size: $mainTitlePH;
           margin: 6% 0;
           font-weight: 500;
@@ -310,7 +392,13 @@
     margin-top: 5%;
     @include tablet {
       margin: 0 auto;
-      font-size: 3.25vw;
+      font-size: 2.75vw;
+      font-weight: 500;
+      padding: 2vw 10vw;
+    }
+    @include mobile {
+      margin: 0 auto;
+      font-size: $navSizePH;
       font-weight: 500;
       padding: 2.25vw 15vw;
     }
