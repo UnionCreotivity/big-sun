@@ -249,7 +249,9 @@
               ></iframe>
             </div>
           </div>
-          <div class="cut-4-back"><a href="#">BACK</a></div>
+          <div class="cut-4-back">
+            <a href="./About_online_case.html">BACK</a>
+          </div>
         </div>
       </section>
       <section class="cut-5-form">
@@ -340,7 +342,15 @@
           slidesPerView: 1,
           spaceBetween: 50,
         });
-
+        function debounce(cb, delay = 500) {
+          let timeout;
+          return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              cb(...args);
+            }, delay);
+          };
+        }
         //表單內容👇
         $("#form-main")
           .submit(function (e) {
@@ -380,13 +390,13 @@
             errorPlacement: function (err, el) {
               el.parent(".form-input-main").after(err);
             },
-            submitHandler: function (form) {
+            submitHandler: debounce(function (form) {
               if ($("#form-main").valid()) {
                 // form.submit();
               } else {
                 console.log("錯誤");
               }
-            },
+            }, 500),
           });
         $("#form-main input[name='phone']").on("keyup", function () {
           $(this).valid();
