@@ -90,12 +90,6 @@
   }
   .cut-2-item-para-left {
     width: 34vw;
-    // @media screen and (max-width: 1920px) {
-    //   width: 41%;
-    // }
-    // @media screen and (max-width: 1500px) {
-    //   width: 42%;
-    // }
     @include tablet {
       width: 100%;
     }

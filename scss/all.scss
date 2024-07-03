@@ -145,14 +145,14 @@ section {
     width: 100%;
     li {
       position: relative;
-      margin-bottom: 9vw;
+      margin-bottom: 7vw;
       width: 100%;
       display: flex;
       justify-content: center;
       &::after {
         content: "";
         position: absolute;
-        top: 220%;
+        top: 200%;
         left: 50%;
         height: 1px;
         width: 50%;

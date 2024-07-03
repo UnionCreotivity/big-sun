@@ -36,36 +36,6 @@
       background-color: white;
     }
     @include cut1para();
-    // @include tablet {
-    //   width: 37%;
-    //   left: 10%;
-    //   h1 {
-    //     font-size: $mainTitlePH;
-    //     letter-spacing: 2px;
-    //   }
-    //   h3 {
-    //     font-size: $navSizePH;
-    //     letter-spacing: 1px;
-    //   }
-    //   .cut-1-para-line {
-    //     margin: 4% 0;
-    //   }
-    // }
-    // @include mobile {
-    //   width: 37%;
-    //   left: 10%;
-    //   h1 {
-    //     font-size: $mainTitlePH;
-    //     letter-spacing: 2px;
-    //   }
-    //   h3 {
-    //     font-size: $navSizePH;
-    //     letter-spacing: 1px;
-    //   }
-    //   .cut-1-para-line {
-    //     margin: 4% 0;
-    //   }
-    // }
   }
 
   //第2cut

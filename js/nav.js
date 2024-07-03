@@ -1,26 +1,25 @@
 const navItem = [
   {
-    number: "01",
     name: "關於大賞",
     url: "About_manage.html",
   },
   {
-    number: "02",
+    name: "最新消息",
+    url: "About_last_news.html",
+  },
+  {
     name: "作品賞析",
     url: "About_project.html",
   },
   {
-    number: "03",
     name: "線上個案",
     url: "About_online_case.html",
   },
   {
-    number: "04",
     name: "開發專區",
     url: "About_develop.html",
   },
   {
-    number: "05",
     name: "聯絡大賞",
     url: "About_contact.html",
   },

@@ -36,21 +36,6 @@
       background-color: white;
     }
     @include cut1para();
-    // @include tablet {
-    //   width: 37%;
-    //   left: 10%;
-    //   h1 {
-    //     font-size: $mainTitlePH;
-    //     letter-spacing: 2px;
-    //   }
-    //   h3 {
-    //     font-size: $navSizePH;
-    //     letter-spacing: 1px;
-    //   }
-    //   .cut-1-para-line {
-    //     margin: 4% 0;
-    //   }
-    // }
   }
 
   //第2cut
@@ -158,18 +143,6 @@
     flex-direction: column;
     width: 75%;
     gap: 0 7vw;
-    // > h2 {
-    //   width: 100%;
-    //   text-align: center;
-    //   font-family: $sans;
-    //   font-size: $subTitleSize;
-    //   font-weight: 500;
-    //   color: #534741;
-    //   background-color: #f1e5d1;
-    //   letter-spacing: 2px;
-    //   padding: 1vw 0vw;
-    //   border-bottom: 1px solid #c7b299;
-    // }
     @include tablet {
       width: 85%;
       padding-left: 0vw;
