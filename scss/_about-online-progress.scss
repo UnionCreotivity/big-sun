@@ -153,4 +153,30 @@
       flex: 1 1 47%;
     }
   }
+  .cut-2-back {
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    a {
+      display: inline-block;
+      font-weight: 500;
+      font-family: $ubu;
+      font-size: $navSize;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: #534741;
+      border: 1px solid #c7b299;
+      border-radius: 10px;
+      padding: 0.5vw 2vw;
+    }
+    @include tablet {
+      margin-top: 5%;
+      a {
+        margin: 0 auto;
+        font-size: 3.25vw;
+        font-weight: 500;
+        padding: 2.25vw 5vw;
+      }
+    }
+  }
 }
