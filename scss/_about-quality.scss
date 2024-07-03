@@ -82,9 +82,9 @@
       width: 100%;
       letter-spacing: 2px;
       margin-bottom: 7%;
-
       cursor: pointer;
       position: relative;
+      overflow: hidden;
       &::after {
         content: "";
         position: absolute;
@@ -121,6 +121,9 @@
       flex-direction: row;
       width: 85%;
       margin-bottom: 2%;
+      a {
+        padding-left: 0;
+      }
       li {
         text-align: center;
         padding-left: 0vw;

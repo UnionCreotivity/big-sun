@@ -83,6 +83,7 @@
       margin-bottom: 7%;
       cursor: pointer;
       position: relative;
+      overflow: hidden;
       &::after {
         content: "";
         position: absolute;
@@ -118,6 +119,9 @@
       justify-content: center;
       flex-direction: row;
       width: 85%;
+      a {
+        padding-left: 0;
+      }
       li {
         text-align: center;
         padding-left: 0vw;

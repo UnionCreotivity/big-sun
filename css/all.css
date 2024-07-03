@@ -458,6 +458,7 @@
   margin-bottom: 7%;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 #about_manage .cut-2-about-menu-ul li::after {
   content: "";
@@ -492,6 +493,9 @@
     justify-content: center;
     flex-direction: row;
     width: 85%;
+  }
+  #about_manage .cut-2-about-menu-ul a {
+    padding-left: 0;
   }
   #about_manage .cut-2-about-menu-ul li {
     text-align: center;
@@ -908,6 +912,7 @@
   margin-bottom: 7%;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 #about_case .cut-2-about-menu-ul li::after {
   content: "";
@@ -943,6 +948,9 @@
     flex-direction: row;
     width: 85%;
     margin-bottom: 2%;
+  }
+  #about_case .cut-2-about-menu-ul a {
+    padding-left: 0;
   }
   #about_case .cut-2-about-menu-ul li {
     text-align: center;
@@ -1139,6 +1147,7 @@
   margin-bottom: 7%;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 #about_quality .cut-2-about-menu-ul li::after {
   content: "";
@@ -1174,6 +1183,9 @@
     flex-direction: row;
     width: 85%;
     margin-bottom: 2%;
+  }
+  #about_quality .cut-2-about-menu-ul a {
+    padding-left: 0;
   }
   #about_quality .cut-2-about-menu-ul li {
     text-align: center;
@@ -3353,6 +3365,7 @@
   list-style-type: none;
   width: 13vw;
   --linkleft: -105%;
+  overflow: hidden;
 }
 #about_develop .cut-2-about-menu-ul li {
   font-size: 1vw;
@@ -3399,6 +3412,9 @@
     flex-direction: row;
     width: 85%;
     margin-bottom: 2%;
+  }
+  #about_develop .cut-2-about-menu-ul a {
+    padding-left: 0;
   }
   #about_develop .cut-2-about-menu-ul li {
     text-align: center;
@@ -3945,6 +3961,7 @@
   list-style-type: none;
   width: 13vw;
   --linkleft: -105%;
+  overflow: hidden;
 }
 #about_urban_renew .cut-2-about-menu-ul li {
   font-size: 1vw;
@@ -3995,6 +4012,9 @@
     flex-direction: row;
     width: 85%;
     margin-bottom: 2%;
+  }
+  #about_urban_renew .cut-2-about-menu-ul a {
+    padding-left: 0;
   }
   #about_urban_renew .cut-2-about-menu-ul li {
     text-align: center;

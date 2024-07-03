@@ -75,6 +75,7 @@
     list-style-type: none;
     width: 13vw;
     --linkleft: -105%;
+    overflow: hidden;
     li {
       font-size: $subTitleSize;
       font-family: $sans;
@@ -122,6 +123,9 @@
       flex-direction: row;
       width: 85%;
       margin-bottom: 2%;
+      a {
+        padding-left: 0;
+      }
       li {
         text-align: center;
         padding-left: 0vw;
