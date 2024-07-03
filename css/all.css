@@ -2414,7 +2414,7 @@
 }
 @media all and (max-width: 1024px) {
   #about_online_case .online-fb .cut-2-item-para-right-item-icon {
-    width: auto;
+    width: unset;
     height: 6vw;
     margin-top: 2vw;
   }
@@ -2653,7 +2653,7 @@
     justify-content: space-between;
   }
   #about_online_inner .online-fb .cut-2-top-right-item-icon {
-    width: auto;
+    width: unset;
     height: 6vw;
     margin-top: 2vw;
   }

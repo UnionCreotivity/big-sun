@@ -211,7 +211,7 @@
     @include tablet {
       justify-content: space-between;
       .cut-2-top-right-item-icon {
-        width: auto;
+        width: unset;
         height: 6vw;
         margin-top: 2vw;
         img {

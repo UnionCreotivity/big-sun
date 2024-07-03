@@ -268,7 +268,7 @@
     <script src="./js/loading.js"></script>
     <script>
       $(window).on("load", function () {
-        $("#accordion").accordion();
+        $("#accordion").accordion({ active: false, collapsible: true });
         const pathName = location.pathname.toLowerCase();
         $(".cut-2-about-menu-ul li").each(function (el) {
           const value = $(this).data("value");
