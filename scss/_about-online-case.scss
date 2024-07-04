@@ -149,6 +149,9 @@
       display: flex;
       width: 100%;
       justify-content: space-around;
+      a {
+        color: #736357;
+      }
     }
     p {
       font-family: $sans;

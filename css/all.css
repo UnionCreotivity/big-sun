@@ -1739,6 +1739,9 @@
     width: 100%;
     margin-top: 5%;
   }
+  #about_project .cut-2-search .cut-2-search-item a {
+    color: white;
+  }
   #about_project .cut-2-search option,
   #about_project .cut-2-search select,
   #about_project .cut-2-search .cut-2-search-item-label {
@@ -2850,6 +2853,9 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+#about_online_case .cut-2-item-para-left-2 .cut-2-item-para-left-2-p a {
+  color: #736357;
 }
 #about_online_case .cut-2-item-para-left-2 p {
   font-family: "Noto Sans TC", sans-serif;
@@ -6174,6 +6180,11 @@ section {
   .footer-bottom p {
     font-size: 3.25vw;
     margin-bottom: 1.75vw;
+  }
+  .footer-bottom a {
+    font-size: 3.25vw;
+    margin-bottom: 1.75vw;
+    color: #4d4d4d;
   }
 }
 
