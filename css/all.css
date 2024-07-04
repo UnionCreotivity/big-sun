@@ -1006,6 +1006,22 @@
     width: 85%;
   }
 }
+#about_manage .cut-4-pic-pc {
+  display: block;
+}
+@media all and (max-width: 1024px) {
+  #about_manage .cut-4-pic-pc {
+    display: none;
+  }
+}
+#about_manage .cut-4-pic-ph {
+  display: none;
+}
+@media all and (max-width: 1024px) {
+  #about_manage .cut-4-pic-ph {
+    display: block;
+  }
+}
 
 #about_case .cut-1-container {
   position: relative;

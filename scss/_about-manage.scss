@@ -454,4 +454,16 @@
       width: 85%;
     }
   }
+  .cut-4-pic-pc {
+    display: block;
+    @include tablet {
+      display: none;
+    }
+  }
+  .cut-4-pic-ph {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
 }
