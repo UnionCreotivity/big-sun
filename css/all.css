@@ -2855,7 +2855,7 @@
   width: 100%;
   justify-content: space-around;
 }
-#about_online_case .cut-2-item-para-left-2 .cut-2-item-para-left-2-p a {
+#about_online_case .cut-2-item-para-left-2 a {
   color: #736357;
   text-decoration: none;
 }
@@ -6154,6 +6154,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer-bottom .footer-bottom-second a {
+  font-size: 3.25vw;
+  margin-bottom: 1.75vw;
+  text-decoration: none;
+  color: #4d4d4d;
 }
 .footer-bottom p {
   color: #4d4d4d;
