@@ -114,6 +114,9 @@
   .cut-2-top-left-2 {
     display: flex;
     align-items: center;
+    a {
+      text-decoration: none;
+    }
     p {
       font-family: $sans;
       font-size: $subTitleSize;
