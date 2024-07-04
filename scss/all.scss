@@ -355,7 +355,19 @@ section {
     text-align: center;
     .footer-bottom-second {
       flex-direction: row;
-      margin-top: 1vw;
+      order: 2;
+    }
+    .order-1 {
+      order: 1;
+    }
+    .footer-bottom-line-1 {
+      order: 3;
+    }
+    .order-4 {
+      order: 4;
+    }
+    .order-5 {
+      order: 5;
     }
     .footer-bottom-line-2 {
       display: none;
