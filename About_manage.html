@@ -185,6 +185,9 @@
             $(this).children("a").css("color", "white");
           }
         });
+        if (window.innerWidth <= 1024) {
+          Fancybox.bind(".cut-4-pic-ph");
+        }
       });
       $(window).on("resize", function () {
         if (window.innerWidth <= 1024) {
