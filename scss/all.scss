@@ -145,14 +145,14 @@ section {
     width: 100%;
     li {
       position: relative;
-      margin-bottom: 7vw;
+      margin-bottom: 3vw;
       width: 100%;
       display: flex;
       justify-content: center;
       &::after {
         content: "";
         position: absolute;
-        top: 200%;
+        top: 110%;
         left: 50%;
         height: 1px;
         width: 50%;
@@ -161,29 +161,63 @@ section {
       }
     }
     li:last-child {
-      margin-bottom: 10vw;
+      margin-bottom: 5vw;
       &::after {
         content: unset;
       }
     }
     a {
       font-size: $contentSizeTB;
+      width: 50%;
+      text-align: center;
+      padding-block: 2%;
     }
   }
+  // @include tablet {
+  //   flex-direction: column;
+  //   margin-right: unset;
+  //   width: 100%;
+  //   li {
+  //     position: relative;
+  //     margin-bottom: 7vw;
+  //     width: 100%;
+  //     display: flex;
+  //     justify-content: center;
+  //     &::after {
+  //       content: "";
+  //       position: absolute;
+  //       top: 200%;
+  //       left: 50%;
+  //       height: 1px;
+  //       width: 50%;
+  //       background-color: #c7b299;
+  //       transform: translate(-50%, -50%);
+  //     }
+  //   }
+  //   li:last-child {
+  //     margin-bottom: 10vw;
+  //     &::after {
+  //       content: unset;
+  //     }
+  //   }
+  //   a {
+  //     font-size: $contentSizeTB;
+  //   }
+  // }
   @include mobile {
     flex-direction: column;
     margin-right: unset;
     width: 100%;
     li {
       position: relative;
-      margin-bottom: 17vw;
+      margin-bottom: 9vw;
       width: 100%;
       display: flex;
       justify-content: center;
       &::after {
         content: "";
         position: absolute;
-        top: 250%;
+        top: 110%;
         left: 50%;
         height: 1px;
         width: 50%;
@@ -199,8 +233,42 @@ section {
     }
     a {
       font-size: $contentSizePH;
+      width: 50%;
+      text-align: center;
+      padding-block: 5%;
     }
   }
+  // @include mobile {
+  //   flex-direction: column;
+  //   margin-right: unset;
+  //   width: 100%;
+  //   li {
+  //     position: relative;
+  //     margin-bottom: 17vw;
+  //     width: 100%;
+  //     display: flex;
+  //     justify-content: center;
+  //     &::after {
+  //       content: "";
+  //       position: absolute;
+  //       top: 250%;
+  //       left: 50%;
+  //       height: 1px;
+  //       width: 50%;
+  //       background-color: #c7b299;
+  //       transform: translate(-50%, -50%);
+  //     }
+  //   }
+  //   li:last-child {
+  //     margin-bottom: 10vw;
+  //     &::after {
+  //       content: unset;
+  //     }
+  //   }
+  //   a {
+  //     font-size: $contentSizePH;
+  //   }
+  // }
 }
 
 .nav-fb {
