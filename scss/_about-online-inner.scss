@@ -310,7 +310,7 @@
       gap: 3vw 0;
       p {
         font-size: 2.75vw;
-        font-weight: 500;
+        font-weight: 400;
       }
       li {
         &::after {
@@ -323,8 +323,8 @@
       margin-top: 7%;
       gap: 3vw 0;
       p {
-        font-size: $navSizePH;
-        font-weight: 500;
+        font-size: $contentSizePH;
+        font-weight: 400;
       }
       li {
         &::after {
